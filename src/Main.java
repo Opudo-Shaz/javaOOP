@@ -31,12 +31,22 @@ public class Main {
 //        System.out.println(woman.startPeriod(5));
 //        System.out.println(woman.breath(1));
 //        System.out.println(woman.sleep());
-
-        Student student1 = new Student(12245, "Engineering", 3.0);
+        Student student1 = new Student("Mary Owade", 21, 'F', "Computer Science", 3.5);
         student1.displayStudentData();
 
-        Employee emp1 = new Employee(56789,"Finance",56789.09);
-        emp1.displayInfo();
-        emp1.eat();
+        Student student2 = new Student("John Doe", 22, 'M', "Mathematics", 3.8);
+        student2.displayStudentData();
+        Student student3 = new Student("Julie Nyachae", 18, 'F', "Mathematics", 1.5);
+        student3.displayStudentData();
+
+
+        Employee employee1 = new Employee("Charles Nyawara", 54, 'M', "IT", 5000.00);
+        employee1.displayInfo();
+
+        Employee employee2 = new Employee("Jane Doe", 30, 'F', "HR", 4500.00);
+        employee2.displayInfo();
+//        Employee emp1 = new Employee(56789,"Finance",56789.09);
+//        emp1.displayInfo();
+//        emp1.eat();
     }
 }

@@ -1,23 +1,24 @@
 package javalearn.oop;
 
-public class Employee extends Person{
-    private final int id;
+public class Employee extends Person {
+    private static int idCounter = 0;  // Static counter to auto-generate employee IDs
+    private final String id;
     private String department;
     private double salary;
 
-    public Employee(int id, String department, double salary) {
-        this.id = id;
-        super.setName("Charles Nyawara");
-        super.setAge(54);
-        super.setGender('M');
+    public Employee(String name, int age, char gender, String department, double salary) {
+        this.id = String.format("EM%04d", ++idCounter);  // Auto-generate employee ID with leading zeros
         this.department = department;
         this.salary = salary;
+        super.setName(name);
+        super.setAge(age);
+        super.setGender(gender);
     }
-//Getters and Setters
-public int getId() {
-    return id;
-}
 
+    // Getters and Setters
+    public String getId() {
+        return id;
+    }
 
     public String getDepartment() {
         return department;
@@ -38,10 +39,10 @@ public int getId() {
     public double calculateAnnualSalary() {
         return salary * 12;
     }
+
     public void giveRaise(double percentage) {
         salary += salary * (percentage / 100);
     }
-
 
     @Override
     public String eat() {
@@ -50,8 +51,9 @@ public int getId() {
 
     @Override
     public String eat(String food) {
-        return "Eating";
+        return "Eating " + food;
     }
+
     public void displayInfo() {
         System.out.println("Employee ID: " + id);
         System.out.println("Employee Name: " + super.getName());
@@ -60,5 +62,4 @@ public int getId() {
         System.out.println("Department: " + department);
         System.out.println("Salary: " + salary);
     }
-
 }
