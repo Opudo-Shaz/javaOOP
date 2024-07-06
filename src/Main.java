@@ -1,9 +1,4 @@
-import javalearn.oop.Child;
-import javalearn.oop.Employee;
-import javalearn.oop.Student;
-import javalearn.oop.Woman;
-import javatestprograms.Addition;
-import javatestprograms.swapNumbers;
+import javatestprograms.*;
 
 //TIP To <b>Run</b> code, press <shortcut actionId="Run"/> or
 // click the <icon src="AllIcons.Actions.Execute"/> icon in the gutter.
@@ -73,8 +68,16 @@ public class Main {
         String result = Addition.addBinaryValues(binary1, binary2);
 
         // Print the result
-        System.out.println("The sum of " + binary1 + " and " + binary2 + " is " + result);
+        System.out.print("The sum of " + binary1 + " and " + binary2 + " is " + result);
+        complexNumbers.displayInfo();
+        System.out.println();
+        OddEvenChecker.displayOddEven(6);
 
+        // Call the function to find the largest number
+        findLargestNumber.findLargestNumber(45, 78, 12);
 
+        }
     }
-}
+
+
+

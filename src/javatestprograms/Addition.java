@@ -9,8 +9,7 @@ public class Addition {
         return sum(x ^ y, (x & y) << 1);
     }
     public double multiplyFloatValues(double a, double b){
-        double p = a * b;
-        return p;
+        return a * b;
     }
     @org.jetbrains.annotations.NotNull
     public static String addBinaryValues(String a, String b){
